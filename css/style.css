@@ -1,13 +1,13 @@
 html {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
   -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
@@ -33,11 +33,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .header-menu {
   margin: 0;
@@ -49,8 +49,8 @@ body {
   gap: 50px;
 }
 .header-menu-link {
-  color: rgb(255, 255, 255);
-  font-family: Roboto;
+  color: #fff;
+  font-family: "Roboto", serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 135%;
@@ -72,19 +72,58 @@ body {
   border-radius: 3px;
 }
 
+.title {
+  display: inline-block;
+  color: #fff;
+  font-family: "El Messiri", serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-align: center;
+  padding-left: 73px;
+  padding-right: 73px;
+  position: relative;
+}
+.title::before {
+  content: "";
+  width: 28px;
+  height: 14px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-image: url("../images/title-leaf-left.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.title::after {
+  content: "";
+  width: 28px;
+  height: 14px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-image: url("../images/title-leaf-right.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .banner {
   margin-bottom: 150px;
 }
 .banner-container {
   padding-top: 136px;
   padding-bottom: 210px;
-  background-image: url("../images/bg-banner.jpg");
+  background-image: url("/images/bg-banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 .banner-content {
   max-width: 587px;
@@ -94,12 +133,94 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  gap: 40px;
+}
+.banner-title {
+  margin: 0;
+  color: #fff;
+  font-family: "El Messiri", serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: 0%;
   text-align: center;
 }
 .banner-subtitle {
+  margin: 0;
   -webkit-box-ordinal-group: 0;
-      -ms-flex-order: -1;
-          order: -1;
+  -ms-flex-order: -1;
+  order: -1;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.banner-subtitle::before {
+  background-image: url("../images/title-leaf-white-left.svg");
+}
+.banner-subtitle::after {
+  background-image: url("../images/title-leaf-white-right.svg");
+}
+
+.session {
+  padding-bottom: 150px;
+}
+.session-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.session-title {
+  margin-bottom: 100px;
+}
+.session-container {
+  display: grid;
+  grid-template-columns: repeat(3, 4fr);
+  grid-template-rows: repeat(2, 258px);
+  -webkit-column-gap: 24px;
+  -moz-column-gap: 24px;
+  column-gap: 24px;
+  row-gap: 24px;
+}
+.session-item {
+  background-image: url("../images/bg-session-items.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.session-item:first-child {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-image: url("../images/bg-session.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 50px;
+  border-bottom: 10px solid #018abe;
+}
+.session-item-title {
+  color: #fff;
+  font-family: "El Messiri", serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 140%;
+  text-align: left;
 }
